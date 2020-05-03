@@ -1,0 +1,16 @@
+name: Spiff
+version: 0.1.0
+description: new theme for grav cms
+icon: rebel
+author:
+  name: Elisha Anagnostakis
+  email: elishastaks@gmail.com
+homepage: https://github.com/elisha-anagnostakis/grav-theme-spiff
+demo: http://demo.yoursite.com
+keywords: grav, theme, etc
+bugs: https://github.com/elisha-anagnostakis/grav-theme-spiff/issues
+readme: https://github.com/elisha-anagnostakis/grav-theme-spiff/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
