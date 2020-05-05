@@ -11,6 +11,10 @@ h1, h2, h3, h4, h5, h6 {
 body {
     font-family: Roboto;
 
+    #breadcrumbs {
+        padding-left: 0;
+    }
+
     a {
         color: rgb(218, 27, 92);
     
@@ -20,14 +24,25 @@ body {
     }
 }
 
+img {
+    max-width: 150px;
+}
+
+#body .padding {
+    position: static;
+    padding: 30px 1rem;
+}
+
 #header {
-    background: white;
+    color: #fff;
+    text-align: left;
+    padding-bottom: 0;
 }
 
 #sidebar {
-        background-color: white;
-        width: 260px;
-        border-right: 1px solid #d6d9db;
+    background-color: white;
+    width: 260px;
+    border-right: 1px solid #d6d9db;
 
         a {
             color: #555;
@@ -37,15 +52,11 @@ body {
             &.subtitle {
                 color: #555;
             }       
-        }
-
-        hr {
-            border-bottom: 1px solid #d6d9db;
-        }
+        }       
 }
 
 #sidebar ul.topics {
-    margin: 0 2rem;
+    margin: 0 2.5em;
 }
 
 a {

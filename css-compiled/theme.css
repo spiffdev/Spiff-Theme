@@ -982,6 +982,9 @@ h1, h2, h3, h4, h5, h6 {
 body {
   font-family: Roboto;
 }
+body #breadcrumbs {
+  padding-left: 0;
+}
 body a {
   color: #da1b5c;
 }
@@ -989,8 +992,19 @@ body a a:hover {
   color: black;
 }
 
+img {
+  max-width: 150px;
+}
+
+#body .padding {
+  position: static;
+  padding: 30px 1rem;
+}
+
 #header {
-  background: white;
+  color: #fff;
+  text-align: left;
+  padding-bottom: 0;
 }
 
 #sidebar {
@@ -1007,12 +1021,9 @@ body a a:hover {
 #sidebar a.subtitle {
   color: #555;
 }
-#sidebar hr {
-  border-bottom: 1px solid #d6d9db;
-}
 
 #sidebar ul.topics {
-  margin: 0 2rem;
+  margin: 0 2.5em;
 }
 
 a {
