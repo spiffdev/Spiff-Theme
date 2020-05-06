@@ -973,10 +973,15 @@ td {
 
 h1 {
   text-align: left;
+  font-size: 3rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Roboto;
+}
+
+#body {
+  margin-left: 290px;
 }
 
 body {
@@ -993,23 +998,23 @@ body a a:hover {
 }
 
 img {
-  max-width: 150px;
+  max-width: 120px;
 }
 
 #body .padding {
-  position: static;
-  padding: 30px 1rem;
+  padding: 12px 1rem;
 }
 
 #header {
   color: #fff;
   text-align: left;
   padding-bottom: 0;
+  margin: 0 0.7em;
 }
 
 #sidebar {
   background-color: white;
-  width: 260px;
+  width: 255px;
   border-right: 1px solid #d6d9db;
 }
 #sidebar a {
@@ -1022,8 +1027,12 @@ img {
   color: #555;
 }
 
+#sidebar-toggle {
+  display: none;
+}
+
 #sidebar ul.topics {
-  margin: 0 2.5em;
+  margin: 0 1.8em;
 }
 
 a {
