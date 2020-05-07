@@ -973,11 +973,13 @@ td {
 
 h1 {
   text-align: left;
-  font-size: 3rem;
+  font-weight: 500;
+  font-size: 42px;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Roboto;
+  color: #1f1a47;
 }
 
 #body {
@@ -986,6 +988,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: Roboto;
+  min-height: 100%;
 }
 body #breadcrumbs {
   padding-left: 0;
@@ -1000,14 +1003,6 @@ body a a:hover {
   color: black;
 }
 
-.title-img {
-  max-width: 120px;
-}
-
-#body .padding {
-  padding: 12px 1rem;
-}
-
 #header {
   color: #fff;
   text-align: left;
@@ -1019,8 +1014,15 @@ body a a:hover {
   background-color: white;
   width: 255px;
   border-right: 1px solid #d6d9db;
+  height: 100%;
+}
+#sidebar .title-img {
+  max-width: 120px;
 }
 #sidebar a {
+  line-height: 20px;
+  font-size: 14px;
+  min-height: 28px;
   color: #555;
 }
 #sidebar a:hover {
@@ -1060,6 +1062,33 @@ a:hover {
 #sidebar ul li.active > a {
   background: #fff;
   color: #DA1B60 !important;
+}
+
+#sidebar ul.topics > li > a {
+  line-height: 36px;
+  height: 36px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #1f1a47;
+}
+
+#body .padding {
+  padding-top: 15px;
+  padding-left: 55px;
+  padding-bottom: 33px;
+}
+
+#body-inner {
+  min-width: 738px;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=theme.css.map */
