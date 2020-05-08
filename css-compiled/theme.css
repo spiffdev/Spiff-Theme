@@ -989,6 +989,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
   font-family: Roboto;
   min-height: 100%;
+  letter-spacing: 0px;
 }
 body #breadcrumbs {
   padding-left: 0;
@@ -1083,11 +1084,6 @@ a:hover {
 }
 
 p {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
   font-size: 16px;
 }
 
