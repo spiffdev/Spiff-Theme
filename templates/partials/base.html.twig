@@ -1,0 +1,130 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{% set github_link_position = github_link_position is defined ? github_link_position : theme_config.github.position %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+<head>
+{% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" {#, maximum-scale=1, user-scalable=no, shrink-to-fit=no"#} >
+    <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="Deliver the next generation of personalized brand experiences in 3D, Agumented Reality (AR) and in real life. Product customization software used by the biggest and smallest brands in the world">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Product Personalization Platform and 3D customization visualization software - Spiff">
+    <meta property="og:description" content="Deliver the next generation of personalized brand experiences in 3D, Agumented Reality (AR) and in real life. Product customization software used by the biggest and smallest brands in the world">
+    <meta property="og:url" content="https://spiff.com.au/">
+    <meta property="og:site_name" content="Spiff Corporate">
+    <meta property="article:modified_time" content="2020-05-05T07:11:53+00:00">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="generator" content="GravCMS">
+    <meta name="abstract" content="Personalisation of your products with augmented reality">
+    <meta name="author" content="Spiff">
+    <meta name="classification" content="Application, Case Study, Kid’s Clothing, Pet Cards, Quote, Shopify, Technology">
+    <meta name="copyright" content="Copyright Spiff Corporate - All rights Reserved.">
+    <meta name="designer" content="Insomnia Inc">
+    <meta name="distribution" content="Global">
+    <meta name="language" content="en-US">
+    <meta name="publisher" content="Spiff Corporate">
+    <meta name="rating" content="General">
+    <meta name="resource-type" content="Document">
+    <meta name="revisit-after" content="3">
+    <meta name="subject" content="Personalised gifts, augmented reality">
+    <meta name="template" content="Spiff">
+    <meta name="robots" content="index,follow">
+    {#{% include 'partials/metadata.html.twig' %}#}
+    <link rel="alternate" type="application/atom+xml" href="{{ base_url_absolute}}/feed:atom" title="Atom Feed" />
+    <link rel="alternate" type="application/rss+xml" href="{{ base_url_absolute}}/feed:rss" title="RSS Feed" />
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}">
+
+    {% block stylesheets %}
+        {% do assets.addCss('theme://css-compiled/nucleus.css',102) %}
+        {% do assets.addCss('theme://css-compiled/theme.css',101) %}
+        {% do assets.addCss('theme://css/custom.css',100) %}
+        {% do assets.addCss('theme://css/font-awesome.min.css',100) %}
+        {% do assets.addCss('theme://css/featherlight.min.css') %}
+
+        {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
+            {% do assets.addCss('theme://css/nucleus-ie9.css') %}
+            {% do assets.addCss('theme://css/pure-0.5.0/grids-min.css') %}
+            {% do assets.addJs('theme://js/html5shiv-printshiv.min.js') %}
+        {% endif %}
+    {% endblock %}
+
+    {% block javascripts %}
+        {% do assets.addJs('jquery',101) %}
+        {% do assets.addJs('theme://js/modernizr.custom.71422.js',100) %}
+        {% do assets.addJs('theme://js/featherlight.min.js') %}
+        {% do assets.addJs('theme://js/clipboard.min.js') %}
+        {% do assets.addJs('theme://js/jquery.scrollbar.min.js') %}
+        {% do assets.addJs('theme://js/learn.js') %}
+    {% endblock %}
+
+    {% block assets deferred %}
+    {{ assets.css()|raw }}
+    {{ assets.js()|raw }}
+  {% endblock %}
+
+{% endblock head %}
+</head>
+<body class="searchbox-hidden {{ page.header.body_classes }}" data-url="{{ page.route }}">
+    {% block sidebar %}
+    <nav id="sidebar">
+        <div id="header-wrapper">
+            <div id="header">
+                <a id="logo" href="{{ theme_config.home_url ?: base_url_absolute }}">{% include 'partials/logo.html.twig' %}</a>
+                {% include 'partials/search.html.twig' %}
+            </div>
+        </div>
+        {% include 'partials/sidebar.html.twig' %}
+    </nav>
+    {% endblock %}
+
+    {% block body %}
+    <section id="body">
+        <div id="overlay"></div>
+
+        <div class="padding highlightable">
+            <a href="#" id="sidebar-toggle" data-sidebar-toggle><i class="fa fa-2x fa-bars"></i></a>
+
+            {% block topbar %}{% if  github_link_position == 'top' or config.plugins.breadcrumbs.enabled %}
+            <div id="top-bar">
+                {% if  github_link_position == 'top' %}
+                <div id="top-github-link">
+                {% include 'partials/github_link.html.twig' %}
+                </div>
+                {% endif %}
+
+                {% if config.plugins.breadcrumbs.enabled %}
+                {% include 'partials/breadcrumbs.html.twig' %}
+                {% endif %}
+            </div>
+            {% endif %}{% endblock %}
+
+            {% block content %}{% endblock %}
+
+            {% block footer %}
+                {% if  github_link_position == 'bottom' %}
+                {% include 'partials/github_note.html.twig' %}
+                {% endif %}
+            {% endblock %}
+
+        </div>
+        {% block navigation %}{% endblock %}
+    </section>
+    {% endblock %}
+
+    {% block analytics %}
+        {% if theme_config.google_analytics_code %}
+        {% include 'partials/analytics.html.twig' %}
+        {% endif %}
+    {% endblock %}
+
+    {% block bottom %}
+        {{ assets.js('bottom')|raw }}
+    {% endblock %}
+ </body>
+</html>
