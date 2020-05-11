@@ -12,13 +12,12 @@
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:locale" content="en_AU">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Product Personalization Platform and 3D customization visualization software - Spiff">
     <meta property="og:description" content="Deliver the next generation of personalized brand experiences in 3D, Agumented Reality (AR) and in real life. Product customization software used by the biggest and smallest brands in the world">
     <meta property="og:url" content="https://spiff.com.au/">
     <meta property="og:site_name" content="Spiff Corporate">
-    <meta property="article:modified_time" content="2020-05-05T07:11:53+00:00">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="generator" content="GravCMS">
     <meta name="abstract" content="Personalisation of your products with augmented reality">
@@ -70,6 +69,7 @@
 
 {% endblock head %}
 </head>
+
 <body class="searchbox-hidden {{ page.header.body_classes }}" data-url="{{ page.route }}">
     {% block sidebar %}
     <nav id="sidebar">
@@ -83,6 +83,10 @@
     </nav>
     {% endblock %}
 
+    <header id="main-header">
+        {% include 'partials/header-bar.html.twig' %}
+    </header>
+
     {% block body %}
     <section id="body">
         <div id="overlay"></div>
@@ -91,6 +95,7 @@
             <a href="#" id="sidebar-toggle" data-sidebar-toggle><i class="fa fa-2x fa-bars"></i></a>
 
             {% block topbar %}{% if  github_link_position == 'top' or config.plugins.breadcrumbs.enabled %}
+
             <div id="top-bar">
                 {% if  github_link_position == 'top' %}
                 <div id="top-github-link">
