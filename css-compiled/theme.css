@@ -971,15 +971,36 @@ td {
   top: -12px;
 }
 
-h1 {
-  text-align: left;
-  font-weight: 500;
-  font-size: 42px;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: Roboto;
   color: #1f1a47;
+  text-align: left;
+  letter-spacing: 0px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18.72px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 13.28px;
+}
+
+h6 {
+  font-size: 10.72px;
 }
 
 #body {
@@ -988,7 +1009,6 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: Roboto;
-  min-height: 100%;
   letter-spacing: 0px;
 }
 body #breadcrumbs {
@@ -1015,7 +1035,10 @@ body a a:hover {
   background-color: white;
   width: 255px;
   border-right: 1px solid #d6d9db;
-  height: 100%;
+}
+#sidebar .padding {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 #sidebar .title-img {
   max-width: 120px;
@@ -1077,6 +1100,8 @@ a:hover {
   padding-top: 15px;
   padding-left: 55px;
   padding-bottom: 33px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 #body-inner {
@@ -1085,6 +1110,45 @@ a:hover {
 
 p {
   font-size: 16px;
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+pre {
+  background: #F0F0F0;
+}
+
+.searchbox {
+  border: 1px solid #c1c1c1;
+}
+.searchbox span {
+  color: #6973864a;
+}
+.searchbox span:hover {
+  color: #69738694;
+}
+.searchbox label {
+  color: #69738694;
+}
+.searchbox input {
+  color: #555;
+  background: #f7fafc;
+}
+.searchbox input::-webkit-input-placeholder {
+  color: #6973864a;
+}
+.searchbox input::-moz-placeholder {
+  color: #6973864a;
+}
+.searchbox input:-moz-placeholder {
+  color: #6973864a;
+}
+.searchbox input:-ms-input-placeholder {
+  color: #6973864a;
+}
+
+.highlightable {
+  padding: 16px 0 16px;
 }
 
 /*# sourceMappingURL=theme.css.map */
