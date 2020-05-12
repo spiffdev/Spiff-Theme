@@ -1004,7 +1004,7 @@ h6 {
 }
 
 #body {
-  margin-left: 290px;
+  margin-left: 255px;
 }
 
 body {
@@ -1035,8 +1035,11 @@ body a a:hover {
   background-color: white;
   width: 255px;
   border-right: 1px solid #d6d9db;
+  min-width: 252px;
 }
 #sidebar .padding {
+  max-width: 1000px;
+  margin: 0 auto;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -1054,10 +1057,6 @@ body a a:hover {
 }
 #sidebar a.subtitle {
   color: #555;
-}
-
-#sidebar-toggle {
-  display: none;
 }
 
 #sidebar ul.topics {
@@ -1104,6 +1103,11 @@ a:hover {
   margin: 0 auto;
 }
 
+#overlay {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 #body-inner {
   min-width: 738px;
 }
@@ -1123,13 +1127,13 @@ pre {
 }
 
 #main-header {
-  border-bottom: 1px solid #e3e8ee;
+  border-bottom: 1px solid #d6d9db;
 }
 #main-header .topnav {
   overflow: hidden;
   background-color: white;
 }
-#main-header .topnav a {
+#main-header .topnav a.button {
   float: right;
   color: white;
   text-align: right;
@@ -1139,23 +1143,26 @@ pre {
 #main-header .topnav a.spiff-cor {
   background-color: white;
   color: #34343c;
+  float: right;
+  text-align: right;
+  padding: 14px 16px;
+  font-size: 17px;
 }
 #main-header .topnav a:hover {
   color: #da1b5c;
 }
 #main-header .tntsearch-form {
   float: left;
-  margin-left: 280px;
-  margin-top: 0.75rem;
+  margin-top: 8px;
   font-size: 17px;
   border: none;
   position: absolute;
   top: 0;
-  width: 400px;
+  width: 600px;
   z-index: 10020;
 }
 #main-header .tntsearch-form textarea, #main-header .tntsearch-form input[type=email], #main-header .tntsearch-form input[type=number], #main-header .tntsearch-form input[type=password], #main-header .tntsearch-form input[type=search], #main-header .tntsearch-form input[type=tel], #main-header .tntsearch-form input[type=text], #main-header .tntsearch-form input[type=url], #main-header .tntsearch-form input[type=color], #main-header .tntsearch-form input[type=date], #main-header .tntsearch-form input[type=datetime], #main-header .tntsearch-form input[type=datetime-local], #main-header .tntsearch-form input[type=month], #main-header .tntsearch-form input[type=time], #main-header .tntsearch-form input[type=week], #main-header .tntsearch-form select[multiple=multiple] {
-  background-color: white;
+  background-color: transparent;
   border: none;
   box-shadow: none;
 }
@@ -1199,6 +1206,18 @@ pre {
 .cta-button:hover {
   background-color: #da1b5c;
   box-shadow: none;
+}
+
+.tntsearch-results {
+  position: initial;
+  top: -10px;
+  padding: 10px;
+  width: calc(994px - 226px);
+  min-height: 58px;
+  background: white;
+  box-shadow: 0 15px 35px 0 rgba(50, 50, 93, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.07);
+  z-index: 10010;
+  border-radius: 0 0 4px 4px;
 }
 
 /*# sourceMappingURL=theme.css.map */
