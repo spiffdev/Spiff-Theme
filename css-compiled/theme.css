@@ -1045,20 +1045,17 @@ h6 {
   z-index: 10000;
 }
 
-#body-inner {
-  min-width: 738px;
-}
-
 .highlightable {
   padding: 16px 0 16px;
 }
 
 #body {
-  margin-left: 255px;
+  margin-left: 251px;
 }
 #body .padding {
   padding-top: 15px;
   padding-left: 55px;
+  padding-right: 55px;
   padding-bottom: 33px;
   max-width: 1000px;
   margin: 0 auto;
@@ -1091,10 +1088,10 @@ body a a:hover {
 
 #sidebar {
   background-color: white;
-  width: 255px;
+  width: 10%;
   border-right: 1px solid #d6d9db;
   min-width: 252px;
-  position: none;
+  position: fixed;
 }
 #sidebar .title-img {
   max-width: 120px;
@@ -1144,6 +1141,7 @@ body a a:hover {
 
 #main-header {
   border-bottom: 1px solid #d6d9db;
+  height: 55px;
 }
 #main-header .search-bar-wrapper {
   max-width: 1000px;
@@ -1190,16 +1188,17 @@ body a a:hover {
   background-color: #aa1c4b;
 }
 #main-header #tntsearch-wrapper {
-  padding-left: 45px;
+  margin-left: 45px;
   margin-top: 2px;
 }
 #main-header .tntsearch-form {
   float: left;
   font-size: 17px;
+  padding-top: 2.5px;
   border: none;
   position: absolute;
   top: 0;
-  width: 768px;
+  width: 60%;
   z-index: 10020;
 }
 #main-header .tntsearch-form textarea, #main-header .tntsearch-form input[type=email], #main-header .tntsearch-form input[type=number], #main-header .tntsearch-form input[type=password], #main-header .tntsearch-form input[type=search], #main-header .tntsearch-form input[type=tel], #main-header .tntsearch-form input[type=text], #main-header .tntsearch-form input[type=url], #main-header .tntsearch-form input[type=color], #main-header .tntsearch-form input[type=date], #main-header .tntsearch-form input[type=datetime], #main-header .tntsearch-form input[type=datetime-local], #main-header .tntsearch-form input[type=month], #main-header .tntsearch-form input[type=time], #main-header .tntsearch-form input[type=week], #main-header .tntsearch-form select[multiple=multiple] {
@@ -1312,32 +1311,15 @@ body a a:hover {
   padding-left: 30px;
   position: relative;
 }
-#footer-section .main-footer .footer-link-list .footer-link-list.social-icons a a:before {
-  font-family: "social-icons";
-  position: absolute;
-  left: 0;
-  top: 50%;
+#footer-section .main-footer .footer-link-list .fab:before {
+  font-family: "FontAwesome";
   margin-top: -7px;
   font-style: normal;
   font-weight: 400;
   line-height: 1;
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
-}
-#footer-section .main-footer .footer-link-list .footer-link-list.social-icons a .facebook a:before {
-  content: "b";
-}
-#footer-section .main-footer .footer-link-list .footer-link-list.social-icons a .twitter a:before {
-  content: "a";
-}
-#footer-section .main-footer .footer-link-list .footer-link-list.social-icons a .pinterest a:before {
-  content: "d";
-}
-#footer-section .main-footer .footer-link-list .footer-link-list.social-icons a .instagram a:before {
-  content: "";
-}
-#footer-section .main-footer .footer-link-list .footer-link-list.social-icons a .youtube a:before {
-  content: "r";
+  padding-right: 10px;
 }
 #footer-section .main-footer .footer-link-list ul {
   margin: 0;
@@ -1368,31 +1350,31 @@ body a a:hover {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
 }
-#footer-section .main-footer .spread-the-word .share-icon .icon-tweet::before {
-  content: "";
+#footer-section .main-footer .spread-the-word .share-icon .share-icon:last-child {
+  margin-right: 0;
 }
-#footer-section .main-footer .spread-the-word .share-icon .icon-like:before {
-  content: "";
-}
-#footer-section .main-footer .spread-the-word .share-icon .icon-pin:before {
-  content: "";
-}
-#footer-section .main-footer .spread-the-word .share-icon .icon-plus:before {
-  content: "";
-}
-#footer-section .main-footer .spread-the-word .share-icon .icon-fancy:before {
-  content: "";
-}
-#footer-section .main-footer .spread-the-word .share-icon .share-icon::before {
-  font-family: "Single Product Webicons Regular";
+#footer-section .main-footer .spread-the-word .share-icon:before {
+  font-family: "FontAwesome";
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   margin-right: 8px;
 }
-#footer-section .main-footer .spread-the-word .share-icon .share-icon:last-child {
-  margin-right: 0;
+#footer-section .main-footer .spread-the-word .icon-tweet:before {
+  content: "";
+}
+#footer-section .main-footer .spread-the-word .icon-like:before {
+  content: "";
+}
+#footer-section .main-footer .spread-the-word .icon-pin:before {
+  content: "";
+}
+#footer-section .main-footer .spread-the-word .icon-plus:before {
+  content: "";
+}
+#footer-section .main-footer .spread-the-word .icon-fancy:before {
+  content: "";
 }
 #footer-section .main-footer .copyright {
   clear: both;
@@ -1400,6 +1382,83 @@ body a a:hover {
 }
 #footer-section .main-footer .copyright p {
   margin: 0;
+}
+
+@media (max-width: 767px) {
+  #main-header .tntsearch-form {
+    width: 80%;
+    padding-top: 0px;
+  }
+  #main-header .cta-button {
+    display: none;
+  }
+  #main-header .nav-links li {
+    display: none;
+  }
+  #main-header #tntsearch-wrapper {
+    margin-top: 4px;
+    padding-top: 6px;
+  }
+  #main-header .search-bar-wrapper {
+    padding-left: 50px;
+    padding-top: 6px;
+  }
+  #main-header .tntsearch-by {
+    padding-top: 12px;
+  }
+  #main-header .tntsearch-clear {
+    padding-top: 8px;
+  }
+
+  #sidebar {
+    transform: translateX(-100%);
+  }
+  #sidebar #footer {
+    display: block;
+  }
+
+  #body {
+    margin: 0 auto;
+  }
+}
+#sidebar-toggle {
+  margin-left: 20px;
+  margin-top: 12px;
+}
+
+#footer {
+  display: none;
+}
+
+#footer ul {
+  text-align: center;
+}
+
+.nav-links-mobile li, a, button {
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.nav-links-mobile li {
+  display: block;
+  padding: 7px 20px;
+}
+
+.nav-links-mobile button {
+  background-color: #da1b5c;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 13px;
+}
+
+#sidebar #footer .nav-links-mobile a {
+  color: white;
+  font-weight: 400;
+}
+
+#sidebar #footer .nav-links-mobile li a {
+  color: #1f1a47;
 }
 
 /*# sourceMappingURL=theme.css.map */
