@@ -7,19 +7,19 @@ window.onload = () => {
     const clearSearch = selectElement(".tntsearch-clear");
     const overlay = selectElement("#overlay");
     const toggleNav = selectElement("#sidebar-toggle");
-    let bool = false;
+    let isSidebarToggled = false;
 
     toggleNav.addEventListener("click", () => {
 
-        if (!bool){
+        if (!isSidebarToggled){
             selectElement("#sidebar").style.left = "251px";
             selectElement("#body").style.left = "251px";
-            bool = true;
+            isSidebarToggled = true;
         }
-        else if (bool) {
+        else if (isSidebarToggled) {
             selectElement("#sidebar").style.left = "0px";
             selectElement("#body").style.left = "0px";
-            bool = false;
+            isSidebarToggled = false;
         }
     });
 
@@ -28,7 +28,7 @@ window.onload = () => {
         selectElement(".tntsearch-results").style.visibility = "visible";
 
         // checks if there are 0 inputs in the search bar
-        if (input.value === 0){
+        if (input.value.length === 0){
             selectElement("#overlay").style.visibility = "hidden";
         }
         else {
