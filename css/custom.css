@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url(//fonts.googleapis.com/css?family=Montserrat:400|Muli:300,400|Inconsolata);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
 .button-secondary, .button {
   display: inline-block;
   padding: 7px 12px;
@@ -1067,6 +1068,7 @@ body {
 }
 body #breadcrumbs {
   padding-left: 0;
+  line-height: inherit;
 }
 body #breadcrumbs span {
   padding: 0 0rem;
