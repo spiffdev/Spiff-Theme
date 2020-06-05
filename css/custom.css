@@ -1,6 +1,12 @@
 @charset "UTF-8";
-@import url(//fonts.googleapis.com/css?family=Montserrat:400|Muli:300,400|Inconsolata);
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+/* @import url(//fonts.googleapis.com/css?family=Montserrat:400|Muli:300,400|Inconsolata);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"); */
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url('../fonts/Roboto-Regular.ttf');
+}
+
 .button-secondary, .button {
   display: inline-block;
   padding: 7px 12px;
@@ -970,6 +976,9 @@ td {
 .scrollbar-inner > .scroll-element.scroll-y.scroll-scrollx_visible .scroll-element_size {
   top: -12px;
 }
+* {
+  font-family: Roboto-Regular;
+}
 
 *:focus {
   outline: none;
@@ -999,7 +1008,7 @@ pre {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Roboto;
+  /* font-family: Roboto-Light; */
   color: #1f1a47;
   text-align: left;
   letter-spacing: 0px;
@@ -1067,6 +1076,7 @@ body {
 }
 body #breadcrumbs {
   padding-left: 0;
+  line-height: inherit;
 }
 body #breadcrumbs span {
   padding: 0 0rem;
@@ -1460,5 +1470,3 @@ body a a:hover {
 #sidebar #footer .nav-links-mobile li a {
   color: #1f1a47;
 }
-
-/*# sourceMappingURL=theme.css.map */

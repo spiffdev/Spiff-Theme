@@ -1,5 +1,3 @@
-
-
 window.onload = () => {
     // selects elements function
     const selectElement = (element) => document.querySelector(element);
