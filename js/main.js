@@ -5,18 +5,22 @@ window.onload = () => {
     const clearSearch = selectElement(".tntsearch-clear");
     const overlay = selectElement("#overlay");
     const toggleNav = selectElement("#sidebar-toggle");
+    const toggleCloseNav = selectElement(".sidebar-close-toggle");
     let isSidebarToggled = false;
 
     toggleNav.addEventListener("click", () => {
 
         if (!isSidebarToggled){
             selectElement("#sidebar").style.left = "251px";
-            selectElement("#body").style.left = "251px";
+            selectElement("#hamburger-wrapper").style.display = "block";
             isSidebarToggled = true;
         }
-        else if (isSidebarToggled) {
+    });
+
+    toggleCloseNav.addEventListener("click", () => {
+        if (isSidebarToggled) {
             selectElement("#sidebar").style.left = "0px";
-            selectElement("#body").style.left = "0px";
+            selectElement("#hamburger-wrapper").style.display = "none";
             isSidebarToggled = false;
         }
     });
