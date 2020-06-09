@@ -90,6 +90,9 @@
     <nav id="sidebar">
         <div id="header-wrapper">
             <div id="header">
+                <div id="hamburger-wrapper">
+                    <a href="#" class="sidebar-close-toggle"><i class="fa fa-2x fa-bars"></i></a>
+                </div>
                 <a id="logo" href="{{ theme_config.home_url ?: base_url_absolute }}">{% include 'partials/logo.html.twig' %}</a>
                 {% include 'partials/search.html.twig' %}
             </div>
