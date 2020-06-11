@@ -1396,8 +1396,12 @@ body a a:hover {
   margin: 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
 
+  #sidebar-toggle {
+    display: inline-block;
+  }
+  
   #top-bar {
     display: none;
   }
