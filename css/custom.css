@@ -1285,10 +1285,11 @@ body a a:hover {
 
 #footer-section {
   margin: 0;
+  bottom: 0;
 }
 #footer-section .footer-wrapper {
-  color: #d6d9db;
-  background-color: grey;
+  color: #999;
+  background-color: #EAEAEA;
   transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   /* background-image: url(//cdn.shopify.com/s/files/1/0246/4048/7476/files/Footer2-min_1920x1920.png?v=1560925019); */
   background-position: 50% 50%;
@@ -1296,7 +1297,7 @@ body a a:hover {
   background-size: cover;
 }
 #footer-section .footer-wrapper a {
-  color: #d6d9db;
+  color: #999;
 }
 #footer-section .main-footer {
   max-width: 1020px;
@@ -1307,7 +1308,7 @@ body a a:hover {
 #footer-section .main-footer .footer-title {
   margin-top: 0;
   margin-bottom: 30px;
-  color: #d6d9db;
+  color: #999;
   text-align: left;
   text-transform: uppercase;
   font-size: 14px;
@@ -1357,8 +1358,8 @@ body a a:hover {
   font-style: normal;
   font-weight: 700;
   line-height: 35px;
-  color: #d6d9db;
-  background-color: rgba(255, 255, 255, 0.22);
+  color: #999;
+  background-color: rgba(255, 255, 255, 1);
   border-radius: 5px;
 }
 #footer-section .main-footer .spread-the-word .share-icon .share-icon:last-child {
@@ -1389,14 +1390,18 @@ body a a:hover {
 }
 #footer-section .main-footer .copyright {
   clear: both;
-  color: #d6d9db;
+  color: #999;
 }
 #footer-section .main-footer .copyright p {
   margin: 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
 
+  #sidebar-toggle {
+    display: inline-block;
+  }
+  
   #top-bar {
     display: none;
   }
@@ -1437,11 +1442,11 @@ body a a:hover {
   }
 
   .footer-wrapper{
-    text-align: center;
+    text-align: left;
   }
 
   #footer-section .main-footer .footer-title {
-    text-align: center;
+    text-align: left;
   }
 
   #footer-section .main-footer .footer-link-list {
@@ -1451,10 +1456,10 @@ body a a:hover {
     margin-bottom: 50px;
   }
 
-  .showing-2-lists .footer-link-list li {
+  /* .showing-2-lists .footer-link-list li {
     display: inline;
     padding: 0 0 0 5px;
-  }
+  } */
 
   /* .showing-2-lists .footer-link-list li:before {
     content: '\002F';
@@ -1508,6 +1513,7 @@ body a a:hover {
 
 #sidebar #footer .nav-links-mobile li a {
   color: #1f1a47;
+  padding-top: 10px;
 }
 
 .sidebar-close-toggle {
